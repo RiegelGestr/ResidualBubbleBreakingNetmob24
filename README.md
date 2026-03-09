@@ -25,7 +25,7 @@ Run the scripts in `src/` in the following order to generate the full dataset:
 7.  **`07_get_detour_metrics.py`**:
     *   Calculates detour metrics from the graphs. Output: `data/detour/{country}.csv`.
 8.  **`08_get_network_gexf.py`**:
-    *   Generates the final network visualization files (`.gexf`) in `data/network/`.
+    *   Generates the final network files (`.gexf`) in `data/network/`.
 
 ## Requirements
 *   Python 3.x
