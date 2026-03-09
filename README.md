@@ -4,7 +4,7 @@
 This folder contains a cleaned and structured workflow for ...
 
 ## Directory Structure
-*   **`raw_data/`**: Contains raw input files (OD matrices, GRDI data, GADM, Street Networks, POIs).
+*   **`raw_data/`**: Contains raw input files (OD matrices, GRDI data, GADM, Street Networks, POIs). The data in this folder are dummy data, randomly generated to provide input for our analysis.
 *   **`src/`**: Python scripts for data processing and generation.
 *   **`data/`**: Directory where generated data will be saved. The subdirectories (`cities`, `pois`, `network`, `detour`, `tmp`, `population`)
 ## Execution Order
