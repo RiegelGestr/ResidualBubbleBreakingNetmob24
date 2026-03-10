@@ -28,14 +28,14 @@ Run the scripts in `src/` in the following order to generate the full dataset:
     *   Generates the final network files (`.gexf`) in `data/network/`.
 9.  **`09_network_visualization.ipynb`**:
     *   Visualizes the mobility networks and deprivation levels (`.gexf` etc.) in `data/network/network_viz`. Output: Figures 1a-b.
-10.  **`10_descriptive_analysis.ipynb`**:
-    *   Performs descriptive analysis, statistical tests, and visualizations. Output: Figure 1d, Figure 2, Supplementary Figures 2-4.
+10.   **`10_descriptive_analysis.ipynb`**:
+      *   Performs descriptive analysis, statistical tests, and visualizations. Output: Figure 1d, Figure 2, Supplementary Figures 2-4.
 11.  **`11_city_analysis.ipynb`**:
-    *   Performs descriptive analysis on the cities and do visualizations of compact vs. sparse cities. Output: Supplementary Figures 3, 5.
+     *   Performs descriptive analysis on the cities and do visualizations of compact vs. sparse cities. Output: Supplementary Figures 3, 5.
 12.  **`12_slx_modeling.ipynb`**:
-    *   Performs SLX modeling and plot the results. Output: Figures 3, Figures 4a-c, Supplementary Figure 6.
+     *   Performs SLX modeling and plot the results. Output: Figures 3, Figures 4a-c, Supplementary Figure 6.
 13.  **`13_poi_density_diversity.ipynb`**:
-    *   Performs regression analysis to explore POI entropy vs. density and plot the results. Output: Figure 4d.
+     *   Performs regression analysis to explore POI entropy vs. density and plot the results. Output: Figure 4d.
 
 ## Requirements
 *   Python 3.x
