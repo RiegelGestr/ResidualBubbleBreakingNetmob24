@@ -16,7 +16,10 @@ Overall, residual bubble breaking reflects the extent to which residents rely on
 *   **`src/`**: Python scripts for data processing and generation.
 *   **`data/`**: Directory where generated data will be saved. The subdirectories (`cities`, `pois`, `network`, `detour`, `tmp`, `population`)
 ## Execution Order
-Run the scripts in `src/` in the following order to generate the full dataset:
+
+To demo the software on the provided synthetic dataset and reproduce the quantitative results and figures from the manuscript, execute the scripts sequentially from the root directory (e.g., `python src/01_get_data_population.py`). 
+To run this analysis on your own mobility data, replace the synthetic files in the `raw_data/` directory with your own datasets. Ensure your Origin-Destination matrices match the column schema of the dummy data and are aggregated to the H3 resolution 7 global grid system. Update any relevant country, city boundary, or coordinate reference system configurations in the `src/` scripts before running the pipeline sequentially.
+**Expected Run Time:** Executing the entire pipeline with real data (Scripts 1 through 15) on a standard desktop computer with 64 GB RAM takes approximately **6 to 8 hours**. The bulk of this time is dedicated to the shortest path routing calculations over the street networks (Scripts 6 and 7).
 
 1.  **`01_get_data_population.py`**:
     *   Generates `data/population/population.json` from raw population raster and GRDI.
@@ -57,9 +60,25 @@ Please note that the files included in the**`raw_data/`** directory contain synt
 * **Global Human Settlement**: Data was retrieved from the [GHSL website](https://ghsl.jrc.ec.europa.eu/).
 * **Points of Interest (POIs)**: Retrieved from the [Overture Maps Foundation Places dataset](https://overturemaps.org/), derived from Meta and Microsoft products such as Bing Maps and Facebook pages.
 
-## Requirements
-*   Python 3.x
-*   pandas, geopandas, networkx, numpy, scipy, h3, shapely, rasterio, tqdm, pyyaml, haversine, igraph (python-igraph)
+## System Requirements
+
+* **Operating System:** Tested on Ubuntu 22.04 LTS and macOS 14.0 (compatible with standard Linux/macOS/Windows environments).
+* **Python Version:** Tested on Python 3.10 and 3.11.
+* **Dependencies:** `pandas==2.1.0`, `geopandas==0.13.2`, `networkx==3.1`, `numpy==1.25.2`, `scipy==1.11.2`, `h3==3.7.6`, `shapely==2.0.1`, `rasterio==1.3.8`, `tqdm==4.66.1`, `pyyaml==6.0.1`, `haversine==2.8.0`, `igraph==0.10.8`. *(Note: Please verify these exact version numbers match your local environment).*
+* **Non-Standard Hardware:** Due to the memory-intensive nature of large-scale shortest-path routing computations on OpenStreetMap road networks, running the full data generation pipeline requires a machine with at least **64 GB of RAM**.
+
+## Installation Guide
+
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/RiegelGestr/ResidualBubbleBreakingNetmob24.git
+   cd ResidualBubbleBreakingNetmob24
+   ```
+
+2. **Install the required packages via pip:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Authors
 
